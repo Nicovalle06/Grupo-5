@@ -1,0 +1,48 @@
+[33mcommit 7ec979806e603636117b83fb33901a5db24c8f6d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: caballo1986 <cesaro.aquino@gmail.com>
+Date:   Wed Sep 2 17:04:53 2020 -0300
+
+    branch
+
+[33mcommit 3f1680c6326bbd6e7f38b5349f5966eba8223c1d[m
+Author: caballo1986 <cesaro.aquino@gmail.com>
+Date:   Wed Sep 2 16:31:20 2020 -0300
+
+    branch cesar
+
+[33mcommit b2deea427c9067ed19b2d516c6c0f9eab26df7e9[m
+Author: caballo1986 <cesaro.aquino@gmail.com>
+Date:   Tue Sep 1 22:40:54 2020 -0300
+
+    se cambio el nombre base de datos esiDB despues tienen que crear en sqlserver esiDB
+
+[33mcommit 14ceba28272a567d203c33d6cbc16bddb9411595[m
+Author: caballo1986 <cesaro.aquino@gmail.com>
+Date:   Tue Sep 1 12:45:22 2020 -0300
+
+    se corrige la carpeta
+
+[33mcommit 9cf40ae086c74960d3c27a4eab7129cb5daad5e2[m
+Merge: 6853e57 dec2b25
+Author: caballo1986 <cesaro.aquino@gmail.com>
+Date:   Fri Aug 28 17:00:04 2020 -0300
+
+    se agrega archivo base
+
+[33mcommit 6853e571208e89c1cd510f6e068292956d99ae2a[m
+Author: caballo1986 <cesaro.aquino@gmail.com>
+Date:   Fri Aug 28 16:55:17 2020 -0300
+
+    se agrega archivo base
+
+[33mcommit dec2b25f236e2bffa1a10c56f6fa516136287082[m
+Author: Nicovalle06 <alejandrovallejoszabala@gmail.com>
+Date:   Fri Aug 28 16:36:18 2020 -0300
+
+    Server corriendo
+
+[33mcommit b0667fd8058649acbf8e90503c51f335497ce99b[m
+Author: Nicovalle06 <alejandrovallejoszabala@gmail.com>
+Date:   Thu Aug 27 18:09:55 2020 -0300
+
+    primer commit
