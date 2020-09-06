@@ -9,25 +9,31 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<!fin->
 	<!CSS->
-	<link rel="stylesheet" href="{ url_for('static', filename='css/main.css') }">
+	<link rel="stylesheet" href="{url_for('static', filename='css/main.css')}">
 	<!FIN->
 </head>
 <body>
 	<! NAVEGADOR BARRA ->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  		<a class="navbar-brand" href="#">ESI BARRA</a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
- 		</button>
-  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-	  			<a class="nav-link active" href="{% url 'home' %}">Inicio <span class="sr-only">(current)</span></a>
-	  			<a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
-	  			<a class="nav-link" href="{% url 'foro' %}">Foro</a>
-	  			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-			</div>
-  		</div>
-	</nav>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">ESI</a>
+		<form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav">
+			  <a class="nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
+				<a class="nav-link active" href="{% url 'home' %}">Inicio <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
+				<a class="nav-link" href="#">Mitos y verdades</a>
+				<a class="nav-link" href="{% url 'foro' %}">Foro</a>
+				<a class="nav-link" href="#">Leyes y Aspectos Legales</a>
+		</div>
+		</div>
+</nav>
 	<!NAVBAR->
 	<div class="container p-4">
 	{% block content %}
