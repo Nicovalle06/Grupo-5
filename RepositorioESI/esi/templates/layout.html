@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,27 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial*scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>ESI</title>
+	<link rel="icon" href="{% static 'icono/esi.ico'%}">
 	<!bootstrap->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<!fin->
 	<!CSS->
-	<link rel="stylesheet" href="{url_for('static', filename='css/main.css')}">
+	<link rel="stylesheet" href="{% static 'css/main.css'%}">
 	<!FIN->
 </head>
 <body>
 	<! NAVEGADOR BARRA ->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">ESI</a>
-		<form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-  </form>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
 	</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
-			  <a class="nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
+
 				<a class="nav-link active" href="{% url 'home' %}">Inicio <span class="sr-only">(current)</span></a>
 				<a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
 				<a class="nav-link" href="{% url 'mitos' %}">Mitos y verdades</a>
@@ -33,6 +31,7 @@
 				<a class="nav-link" href="{% url 'legal' %}">Leyes y Aspectos Legales</a>
 		</div>
 		</div>
+			  <a class="nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
 </nav>
 	<!NAVBAR->
 	<div class="container p-4">
