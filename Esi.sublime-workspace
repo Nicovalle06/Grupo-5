@@ -1,0 +1,305 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"request"
+			],
+			[
+				"url",
+				"urls"
+			],
+			[
+				"ur",
+				"urls"
+			],
+			[
+				"auto",
+				"auto_now_add"
+			],
+			[
+				"auot",
+				"auto_now_add"
+			],
+			[
+				"post",
+				"Post"
+			],
+			[
+				"mode",
+				"models"
+			],
+			[
+				"For",
+				"ForeignKey"
+			],
+			[
+				"STATIC",
+				"STATICFILES_DIRS"
+			],
+			[
+				"us",
+				"usuarios"
+			],
+			[
+				"AUTH_",
+				"AUTH_USER_MODEL\t★ pro ⟠"
+			],
+			[
+				"A",
+				"AbstractUser\ttype ⟠"
+			],
+			[
+				"contrib",
+				"contrib.auth.models\t★ pro ⟠"
+			],
+			[
+				"MEDIA",
+				"MEDIA_ROOT = os.path\t★ pro ⟠"
+			],
+			[
+				"os",
+				"os.path.dirname\t★ pro ⟠"
+			],
+			[
+				"dj",
+				"django\t★ pro ⟠"
+			],
+			[
+				"porpce",
+				"porcentaje_personas_masdoscientos"
+			],
+			[
+				"por",
+				"porcentaje_personas_menosdoscientos"
+			],
+			[
+				"cantidad_",
+				"cantidad_colillas"
+			],
+			[
+				"porce",
+				"porcentaje_personas_mascien"
+			],
+			[
+				"can",
+				"cantidad_colillas"
+			],
+			[
+				"ca",
+				"cantidad_colillas"
+			],
+			[
+				"porc",
+				"porcentaje_personas_mascien"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/INFORMATORIO/ESI/RepositorioESI",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi"
+	],
+	"file_history":
+	[
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/settings/base.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/admin.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/urls.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/views.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/post.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/posteos.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/urls.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/models.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/views.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/layout.html",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/templates/noticias/listar.html",
+		"/C/Users/Gabbo/Desktop/Proyecto/app.js",
+		"/C/Users/Gabbo/Desktop/html.html",
+		"/E/INFORMATORIO/ESI/.git/COMMIT_EDITMSG",
+		"/C/Users/Gabbo/Desktop/Proyecto/style.css",
+		"/C/Users/Gabbo/Desktop/Proyecto/index.html",
+		"/C/Users/Gabbo/Desktop/Proyecto/.git/COMMIT_EDITMSG",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/apps/noticias/views.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/info/settings/base.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/info/settings/local.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/apps/noticias/urls.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/info/urls.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/apps/usuarios/models.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/apps/noticias/migrations/urls.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/apps/usuarios/urls.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/info/views.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/manage.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/templates/home.html",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/templates/pag2.html",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/info/settings/views.py",
+		"/E/INFORMATORIO/ENTORNOS/DJANGO/RepositorioInfo/info/info/settings/production.py",
+		"/E/INFORMATORIO/03Practicas/Conn_prueba/prueba_conexion.py",
+		"/E/INFORMATORIO/03Practicas/POO/Level Stone/Caso2.py",
+		"/C/Users/Gabbo/AppData/Local/Temp/kite_tutorial.py",
+		"/E/INFORMATORIO/03Practicas/Repetitivas/Desafio2.py",
+		"/C/Users/Gabbo/Desktop/asaas.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Esi.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

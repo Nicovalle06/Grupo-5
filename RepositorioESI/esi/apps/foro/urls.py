@@ -1,12 +1,11 @@
 from django.contrib import admin
 from django.conf import settings
-
+from django.conf.urls.static import static
+from django.conf import path
 
 urlpatterns = [
-    url(r'^' , include('musette.urls')),
+	path('admin/', admin.site.urls)
 ]
-
-from django.conf import settings
 
 if settings.DEBUG:
     from django.conf.urls.static import static

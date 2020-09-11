@@ -11,3 +11,5 @@ def Mitos(request):
 	return render(request,'mitos.html')
 def Legal(request):
 	return render(request,'legal.html')
+def Post(request):
+    return render(request, 'post_list.html')
