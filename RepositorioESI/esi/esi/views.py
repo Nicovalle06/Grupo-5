@@ -8,7 +8,7 @@ def Noticias(request):
 def Foro(request):
 	return render(request,'foro.html')
 def Mitos(request):
-	return render(request,'mitos.html')
+	return render(request,'myv/mitos.html')
 def Legal(request):
 	return render(request,'legal.html')
 def Post(request):
