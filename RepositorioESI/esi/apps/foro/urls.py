@@ -1,10 +1,16 @@
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf import path
+from django.urls import path
+from . import views
+
+app_name = "foro"
 
 urlpatterns = [
-	path('admin/', admin.site.urls)
+	path('admin/', admin.site.urls),
+	path('Crear/', views.Crear.as_view(), name="crear"),
+
+
 ]
 
 if settings.DEBUG:

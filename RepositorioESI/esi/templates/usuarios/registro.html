@@ -1,0 +1,9 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+    <h1>Registrese aquí!!</h1>
+    <form method='POST'>{%csrf_token%}
+      {{form.as_p}}
+      <input type="submit" name="" value="ENVIAR">
+    </form>
+{% endblock %}
