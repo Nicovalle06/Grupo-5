@@ -4,11 +4,11 @@ from django.conf.urls.static import static
 from django.urls import path
 from . import views
 
-app_name = "foro"
+app_name="usuarios"
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	path('Crear/', views.Crear.as_view(), name="crear"),
+	path('Registrar/', views.RegistroUsuario.as_view(), name = "registrar"),
 
 
 ]
