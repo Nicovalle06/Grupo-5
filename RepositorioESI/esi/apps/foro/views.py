@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import AltaPost
 from .models import Post
 from django.views.generic import CreateView
+from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 #from django.utils import timezone
 
@@ -18,4 +19,8 @@ class Crear(CreateView):
     model = Post
     form_class = AltaPost
     template_name = 'foro/crear.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('foro:listar')
+
+class Listar(ListView):
+    model = Post
+    template_name = 'foro/listar.html'

@@ -11,7 +11,7 @@ urlpatterns = [
     path('noticias/',views.Noticias,name="noticias"),
     path('mitos/',views.Mitos,name="mitos"),
     path('legal/',views.Legal,name="legal"),
-    path('Login',auth.LoginView.as_view(template_name  = "login.html"), name="login"),
+    path('Login',auth.LoginView.as_view(template_name  = "usuarios/login.html"), name="login"),
     path('Logout',auth.LogoutView.as_view(), name="logout"),
 
 
