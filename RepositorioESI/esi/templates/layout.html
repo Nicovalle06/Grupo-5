@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<!fin->
 	<!CSS->
-	<link rel="stylesheet" href="{% static 'css/main.css'%}">
+	<link rel="stylesheet" href="{% static 'css/main2.css'%}">
 	<!FIN->
 </head>
 <body>
@@ -27,8 +27,13 @@
 				<a class="nav-link active" href="{% url 'home' %}">Inicio <span class="sr-only">(current)</span></a>
 
 				<a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
+<<<<<<< HEAD
 				<a class="nav-link" href="{% url 'myv:mitos' %}">Mitos y verdades</a>
 				<a class="nav-link" href="{% url 'foro:crear' %}">Foro</a>
+=======
+				<a class="nav-link" href="{% url 'mitos' %}">Mitos y verdades</a>
+				<a class="nav-link" href="{% url 'foro:listar' %}">Foro</a>
+>>>>>>> 754e07904356eaf08b60f243ff89cc85167e6bdc
 				<a class="nav-link" href="{% url 'legal' %}">Leyes y Aspectos Legales</a>
 		</div>
 		</div>

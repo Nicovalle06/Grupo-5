@@ -1,0 +1,15 @@
+{% extends 'layout.html'%}
+{%block content%}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">FORO</h1>
+    <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style=""> Crear Posteo </a></p>
+    {% for p in object_list %}
+      <p><b>AUTOR: </b>{{p.autor}}</p>
+      <p><b>TITULO: </b>{{p.titulo}}</p>
+      <p><b>TEXTO: </b>{{p.texto}}</p>
+      -----------------------------------
+    {% endfor %}
+  {%endblock%}
+  </div>
+</div>

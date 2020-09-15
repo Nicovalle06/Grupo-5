@@ -2,7 +2,10 @@ from django.shortcuts import render
 from .forms import AltaPost
 from .models import Post
 from django.views.generic import CreateView
+from django.views.generic.list import ListView
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 #from django.utils import timezone
 
 # Create your views here.
@@ -14,8 +17,12 @@ from django.urls import reverse_lazy
 
 
 #Vistas basadas en clases
-class Crear(CreateView):
+class Crear(LoginRequiredMixin,CreateView):
     model = Post
     form_class = AltaPost
     template_name = 'foro/crear.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('foro:listar')
+
+class Listar(ListView):
+    model = Post
+    template_name = 'foro/listar.html'
