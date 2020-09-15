@@ -6,4 +6,4 @@ class AltaPost(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = ['autor', 'titulo', 'texto', 'fecha_publicacion']
