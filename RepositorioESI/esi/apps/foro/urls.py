@@ -9,8 +9,8 @@ app_name = "foro"
 urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('Crear/', views.Crear.as_view(), name="crear"),
-	path('Listar/', views.Listar.as_view(), name="listar")
-
+	path('Listar/', views.Listar.as_view(), name="listar"),
+	
 
 
 ]

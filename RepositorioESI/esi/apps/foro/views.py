@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import AltaPost
 from .models import Post
 from django.views.generic import CreateView
+from django.views.generic.detail import DetailView
+from django.utils import timezone
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -22,7 +24,17 @@ class Crear(LoginRequiredMixin,CreateView):
     form_class = AltaPost
     template_name = 'foro/crear.html'
     success_url = reverse_lazy('foro:listar')
+    def form_valid(self,form):
+    	p = form.save(commit=False)
+    	p.autor = self.request.user
+    	p.save()
+    	return redirect(self.success_url)
+
 
 class Listar(ListView):
     model = Post
     template_name = 'foro/listar.html'
+
+class Mostrar(DetailView):
+    template_name = 'foro/detalle.html'
+    model = Post    
