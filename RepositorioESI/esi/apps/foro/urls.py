@@ -10,7 +10,13 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('Crear/', views.Crear.as_view(), name="crear"),
 	path('Listar/', views.Listar.as_view(), name="listar"),
+<<<<<<< HEAD
 	
+=======
+	path('Buscar/', views.Buscar, name="buscar"),
+	path('Detalle/<int:pk>', views.PostDetail.as_view(), name = 'detalle')
+
+>>>>>>> b439f0d7cf25c5b0a8664f221b380903c82c516c
 
 
 ]

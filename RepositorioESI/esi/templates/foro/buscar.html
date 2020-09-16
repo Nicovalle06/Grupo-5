@@ -3,29 +3,6 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">FORO</h1>
-      <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style=""> Crear Posteo </a></p>   <p class="lead"><a class="boton" href="{% url 'foro:buscar' %}" style=""> Buscar por Tematicas </a></p>
-
-<<<<<<< HEAD
-      <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style="float: rigth"> Crear Posteo </a></p>
-
-    {% for p in object_list %}
-      <h2><div class = "post_meta">
-          <b>{{ p.titulo }}</b> 
-      </div>
-    </h2>
-    <h3>
-      <div class = "post_body">
-        {{ p.texto|safe|linebreaks}}
-      </div>
-    </h3>
-    <h4>
-      <div class = "post_body">
-        {{ p.tematica}}
-      </div>
-    </h4>
-     <br>
-=======
-
             <form method="GET">
               <select name="buscar">
                 {% for t in tematica %}
@@ -44,13 +21,6 @@
 
         </div>
       </div>
->>>>>>> b439f0d7cf25c5b0a8664f221b380903c82c516c
     {% endfor %}
 
   {%endblock%}
-  </div>
-</div>
-
-<!--<p><b>AUTOR: </b>{{p.autor}} </p>  -->
-
-<!--<p><b>TITULO: </b><a href="{% url 'foro:detalle' p.id %}">{{p.titulo}}</a></p> -->
