@@ -1,0 +1,13 @@
+{% extends 'layout.html'%}
+{% block content %}
+<! JUMBOTON ->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{object.titulo}}</h1>
+    {{object.fecha_publicacion}}
+    <br>
+    {{object.texto}}
+  </div>
+</div>
+<! FIN
+{% endblock %}
