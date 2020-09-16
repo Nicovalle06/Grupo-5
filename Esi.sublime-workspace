@@ -108,52 +108,10 @@
 	"buffers":
 	[
 		{
-			"file": "RepositorioESI/esi/apps/foro/views.py",
-			"settings":
-			{
-				"buffer_size": 1171,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "{% extends 'layout.html'%}\n\t{%block content%}\n\n\t\t<h1>{{ object.titulo }}</h1>\n\t\t<p>{{ object.texto}} }}</p>\n\t\t<p>Published: {{ object.fecha_publicacion|date }}</p>\n\t\t<p>Date: {{ now|date }}</p>\n\n \t{%endblock%}\n\n\n",
-			"file": "RepositorioESI/esi/templates/foro/detalle.html",
-			"file_size": 137,
-			"file_write_time": 132446825433954406,
-			"settings":
-			{
-				"buffer_size": 212,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "RepositorioESI/esi/apps/foro/urls.py",
-			"settings":
-			{
-				"buffer_size": 576,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "{% extends 'layout.html'%}\n{%block content%}\n<div class=\"jumbotron jumbotron-fluid\">\n  <div class=\"container\">\n    <h1 class=\"display-4\">FORO</h1>\n\n      <p class=\"lead\"><a class=\"boton\" href=\"{% url 'foro:crear' %}\" style=\"\"> Crear Posteo </a></p>\n\n    {% for p in object_list %}\n      <h2><div class = \"post_meta\">\n          <b>{{ p.titulo }}</b> \n      </div>\n    </h2>\n    <h3>\n      <div class = \"post_body\">\n        {{ p.texto|safe|linebreaks}}\n      </div>\n    </h3>\n    <h4>\n      <div class = \"post_body\">\n        {{ p.tematica}}\n      </div>\n    </h4>\n     <br>\n    {% endfor %}\n\n  {%endblock%}\n  </div>\n</div>\n",
-			"file": "RepositorioESI/esi/templates/foro/listar.html",
-			"file_size": 662,
-			"file_write_time": 132446834613235738,
-			"settings":
-			{
-				"buffer_size": 621,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "RepositorioESI/esi/apps/foro/models.py",
 			"settings":
 			{
-				"buffer_size": 701,
+				"buffer_size": 825,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -212,15 +170,18 @@
 	],
 	"file_history":
 	[
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/layout.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/buscar.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/listar.html",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/detalle.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/urls.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/detalle.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/migrations/0002_auto_20200915_1759.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/migrations/0001_initial.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/views.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/models.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/layout.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/forms.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/settings/base.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/urls.py",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/models.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/admin.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/post_list.html",
 		"/E/INFORMATORIO/ESI/.git/MERGE_MSG",
@@ -256,7 +217,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -288,116 +249,30 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "RepositorioESI/esi/apps/foro/views.py",
+					"file": "RepositorioESI/esi/apps/foro/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1171,
+						"buffer_size": 825,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1166,
-								1166
+								262,
+								262
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "RepositorioESI/esi/templates/foro/detalle.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 212,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								212,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "RepositorioESI/esi/apps/foro/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 576,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								340,
-								340
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "RepositorioESI/esi/templates/foro/listar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 621,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								168,
-								164
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -406,43 +281,13 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "RepositorioESI/esi/apps/foro/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 701,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								650,
-								650
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -479,7 +324,7 @@
 	"project": "Esi.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 68.0
 	},
 	"save_all_on_build": true,
 	"select_file":
