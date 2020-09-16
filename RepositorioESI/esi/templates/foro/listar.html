@@ -1,0 +1,35 @@
+{% extends 'layout.html'%}
+{%block content%}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">FORO</h1>
+      <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style=""> Crear Posteo </a></p>   <p class="lead"><a class="boton" href="{% url 'foro:buscar' %}" style=""> Buscar por Tematicas </a></p>
+
+
+            <form method="GET">
+              <select name="buscar">
+                {% for t in tematica %}
+                  <option>{{t.nombre}}</option>
+                {% endfor %}
+              </select>
+              <button type="submit">Buscar</button>
+            </form>
+
+    {% for p in object_list %}
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{p.titulo}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+
+        </div>
+      </div>
+    {% endfor %}
+
+  {%endblock%}
+  </div>
+</div>
+
+<!--<p><b>AUTOR: </b>{{p.autor}} </p>  -->
+
+<!--<p><b>TITULO: </b><a href="{% url 'foro:detalle' p.id %}">{{p.titulo}}</a></p> -->
