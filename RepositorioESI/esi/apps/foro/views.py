@@ -20,9 +20,9 @@ class Crear(LoginRequiredMixin,CreateView):
         return redirect(self.success_url)
 
 
-class Listar(ListView):
-    model = Post
-    template_name = 'foro/listar.html'
+#class Listar(ListView):
+#    model = Post
+#    template_name = 'foro/listar.html'
 
 
 class PostDetail(DetailView):
@@ -30,8 +30,17 @@ class PostDetail(DetailView):
     template_name = 'foro/detalle.html'
 
 
-def Buscar(request):
+def Listar(request):
     context = {}
     tematicas = Tematica.objects.all()
     context['tematica'] = tematicas
-    return render(request, 'foro/buscar.html', context)
+    id_tem = request.GET.get('buscar', None)
+
+    if id_tem:
+            resultado = Post.objects.filter(tematica = id_tem)
+            context['posteos'] = resultado
+    else:
+        todos = Post.objects.all()
+        context['posteos'] = todos
+
+    return render(request, 'foro/listar.html', context)

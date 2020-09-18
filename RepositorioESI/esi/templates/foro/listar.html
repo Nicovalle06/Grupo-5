@@ -3,27 +3,36 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">FORO</h1>
-      <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style=""> Crear Posteo </a></p>   <p class="lead"><a class="boton" href="{% url 'foro:buscar' %}" style=""> Buscar por Tematicas </a></p>
-
+      <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style=""> Crear Posteo </a></p>
 
             <form method="GET">
-              <select name="buscar">
-                {% for t in tematica %}
-                  <option>{{t.nombre}}</option>
-                {% endfor %}
-              </select>
-              <button type="submit">Buscar</button>
+            <select name="buscar">
+              {% for t in tematica %}
+                <option value="{{t.id}}">{{t.nombre}}</option>
+              {% endfor %}
+            </select>
+            <button class="btn btn-primary" type="submit">Buscar</button>
             </form>
 
+<<<<<<< HEAD
     {% for p in object_list %}
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{p.titulo}}</h5>
           <p class="card-text">{% print(p.texto[1:20]) %} {%%}</p>
           <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+=======
+    {% for p in posteos %}
+>>>>>>> c450f3869ca49f917883d7b85d2dd3046dc7253d
 
-        </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{p.titulo}}</h5>
+        <p class="card-text">Para visualizar el contenido haga click en ver..</p>
+        <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
       </div>
+    </div>
+          <br>
     {% endfor %}
 
   {%endblock%}
