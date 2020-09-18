@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 #from django.utils import timezone
+
 #Vistas basadas en clases
 class Crear(LoginRequiredMixin,CreateView):
     model = Post

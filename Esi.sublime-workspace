@@ -119,35 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "RepositorioESI/esi/templates/foro/buscar.html",
-			"settings":
-			{
-				"buffer_size": 966,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "RepositorioESI/esi/templates/layout.html",
-			"settings":
-			{
-				"buffer_size": 2608,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "{% extends 'layout.html'%}\n{%block content%}\n<div class=\"jumbotron jumbotron-fluid\">\n  <div class=\"container\">\n    <h1 class=\"display-4\">FORO</h1>\n      <p class=\"lead\"><a class=\"boton\" href=\"{% url 'foro:crear' %}\" style=\"\"> Crear Posteo </a></p>   <p class=\"lead\"><a class=\"boton\" href=\"{% url 'foro:buscar' %}\" style=\"\"> Buscar por Tematicas </a></p>\n\n\n            <form method=\"GET\">\n              <select name=\"buscar\">\n                {% for t in tematica %}\n                  <option>{{t.nombre}}</option>\n                {% endfor %}\n              </select>\n              <button type=\"submit\">Buscar</button>\n            </form>\n\n    {% for p in object_list %}\n      <div class=\"card\" style=\"width: 18rem;\">\n        <div class=\"card-body\">\n          <h5 class=\"card-title\">{{p.titulo}}</h5>\n          <p class=\"card-text\">{{p.texto}}</p>\n          <a href=\"{% url 'foro:detalle' p.id %}\" class=\"btn btn-primary\">Ver</a>\n\n        </div>\n      </div>\n    {% endfor %}\n\n  {%endblock%}\n  </div>\n</div>\n\n<!--<p><b>AUTOR: </b>{{p.autor}} </p>  -->\n\n<!--<p><b>TITULO: </b><a href=\"{% url 'foro:detalle' p.id %}\">{{p.titulo}}</a></p> -->\n",
-			"file": "RepositorioESI/esi/templates/foro/listar.html",
-			"file_size": 1194,
-			"file_write_time": 132449129124776741,
-			"settings":
-			{
-				"buffer_size": 1139,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -203,14 +174,14 @@
 	],
 	"file_history":
 	[
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/buscar.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/listar.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static/css/main.css",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/layout.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/detalle.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/views.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/models.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static/css/main2.css",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/listar.html",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/buscar.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/urls.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/migrations/0002_auto_20200915_1759.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/migrations/0001_initial.py",
@@ -284,98 +255,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "RepositorioESI/esi/templates/foro/buscar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 966,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								493,
-								493
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "RepositorioESI/esi/templates/layout.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2608,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								530,
-								587
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "RepositorioESI/esi/templates/foro/listar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1139,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								842,
-								831
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
