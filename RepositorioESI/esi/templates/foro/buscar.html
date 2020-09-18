@@ -10,14 +10,16 @@
                 {% endfor %}
               </select>
               <button type="submit">Buscar</button>
-            </form>
-
-    {% for p in object_list %}
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{p.titulo}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+              {% for p in object_list%}
+                {% if p.tematica == "submit"%}
+                    <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{p.titulo}}</h5>
+                      <p class="card-text">{{p.texto}}</p>
+                      <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+                        </form>
+                {% endif %}
+              {% endfor %}
 
         </div>
       </div>

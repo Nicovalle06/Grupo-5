@@ -4,7 +4,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">{{object.titulo}}</h1>
-    {{object.fecha_publicacion}}
+    {{object.fecha_publicacion | date:"j N Y"}}
     <br>
     {{object.texto}}
   </div>
