@@ -19,7 +19,7 @@
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">{{p.titulo}}</h5>
-        <p class="card-text">Para visualizar el contenido haga click en ver..</p>
+        <p class="card-text">{{p.texto|truncatechars:50}}</p>
         <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
       </div>
     </div>

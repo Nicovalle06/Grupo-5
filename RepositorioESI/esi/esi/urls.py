@@ -16,7 +16,8 @@ urlpatterns = [
 
 
     path('foro/',include('apps.foro.urls')),
-    path('usuarios/',include('apps.usuarios.urls'))
+    path('usuarios/',include('apps.usuarios.urls')),
+    path('noticias/', include('apps.noticias.urls')),
 ]
 
 
