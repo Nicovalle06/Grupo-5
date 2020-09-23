@@ -8,6 +8,21 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 #from django.utils import timezone
 
+from django.core.paginator import Paginator
+
+
+
+def listing(request):
+    post_list = Post.objects.all()
+    paginator = Paginator(post_list,3) # Show 25 contacts per page.
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'foro/listar.html', {'page_obj': page_obj})
+
+
+
 #Vistas basadas en clases
 class Crear(LoginRequiredMixin,CreateView):
     model = Post
@@ -31,17 +46,20 @@ class PostDetail(DetailView):
     template_name = 'foro/detalle.html'
 
 
-def Listar(request):
+
+def buscar(request):
     context = {}
     tematicas = Tematica.objects.all()
     context['tematica'] = tematicas
     id_tem = request.GET.get('buscar', None)
 
+
     if id_tem:
-            resultado = Post.objects.filter(tematica = id_tem)
-            context['posteos'] = resultado
+        resultado = Post.objects.filter(tematica = id_tem).order_by('-fecha_publicacion')
+        context['posteos'] = resultado
+
     else:
-        todos = Post.objects.all()
+        todos = Post.objects.all().order_by('-fecha_publicacion')
         context['posteos'] = todos
 
-    return render(request, 'foro/listar.html', context)
+    return render(request, 'foro/buscar.html',context )

@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}
+{%block content%}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">TEMATICAS</h1>
+<form method="GET">
+<select name="buscar">
+  {% for t in tematica %}
+    <option value="{{t.id}}">{{t.nombre}}</option>
+  {% endfor %}
+</select>
+<button class="btn btn-primary" type="submit">Buscar</button>
+</form>
+
+{% for p in posteos %}
+
+<h3>{{p.titulo}}</h3>
+
+<p>{{p.texto|truncatechars:50}}</p>
+
+<a href="{% url 'foro:detalle' p.id %}">Ver Más</a>
+
+
+{% endfor %}
+
+</div>
+
+</div>
+{%endblock%}
