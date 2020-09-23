@@ -8,6 +8,23 @@
     <br>
     {{object.texto}}
   </div>
-</div>
+  <hr>
+  <a>Comentarios: {{ post.comentarios.count }}</a>
+  {% for comentario in post.comentarios.all %}
+      <div class="comentario">
+          <div class="fecha">{{ comentario.fecha_creacion }}</div>
+          <strong>{{ comentario.usuario }}</strong>
+          <p>{{ comentario.mensaje|linebreaks }}</p>
+      </div>
+  {% empty %}
+      <p>Aún no existen comentarios. ¡Hace uno!</p>
+  {% endfor %}
+  <h1>Comentar: </h1>
+  <form method='POST'>
+    {%csrf_token%}
+    <p>{{ form.as_p }}</p>
+  <input type="submit" name="" value="Comentar">
+  </form>
+ 
 <! FIN
 {% endblock %}

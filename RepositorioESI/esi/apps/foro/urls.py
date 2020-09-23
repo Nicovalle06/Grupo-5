@@ -12,7 +12,7 @@ urlpatterns = [
 	#path('Listar/', views.Listar.as_view(), name="listar"),
 	path('Listar/', views.Listar, name="listar"),
 	path('Detalle/<int:pk>', views.PostDetail.as_view(), name = 'detalle')
-
+	
 
 
 ]

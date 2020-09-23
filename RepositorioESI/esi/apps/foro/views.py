@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import AltaPost
+from .forms import AltaPost , Comentarios
 from .models import Post, Tematica
 from django.views.generic import CreateView, DetailView
 from django.views.generic.list import ListView
@@ -45,3 +45,11 @@ def Listar(request):
         context['posteos'] = todos
 
     return render(request, 'foro/listar.html', context)
+
+
+def Comentario(request):
+    if request.method == 'POST':
+        form = Comentarios(request.POST)
+    else:
+        form = Comentarios()
+    return render_to_response('detalle.html', {'form': form})

@@ -163,31 +163,28 @@
 		"/E/INFORMATORIO/ESI/RepositorioESI",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/myv",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/usuarios",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/settings",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro"
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates"
 	],
 	"file_history":
 	[
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/buscar.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/listar.html",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static/css/main.css",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/noticias/urls.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/urls.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static/css/main2.css",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/layout.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/settings/base.py",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/buscar.html",
+		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static/css/main.css",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/foro/detalle.html",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/views.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/models.py",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/static/css/main2.css",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/urls.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/migrations/0002_auto_20200915_1759.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/migrations/0001_initial.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/forms.py",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/settings/base.py",
-		"/E/INFORMATORIO/ESI/RepositorioESI/esi/esi/urls.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/apps/foro/admin.py",
 		"/E/INFORMATORIO/ESI/RepositorioESI/esi/templates/post_list.html",
 		"/E/INFORMATORIO/ESI/.git/MERGE_MSG",
@@ -223,7 +220,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -262,7 +259,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -299,7 +296,7 @@
 	"project": "Esi.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -337,7 +334,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 219.0,
+	"side_bar_width": 321.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
