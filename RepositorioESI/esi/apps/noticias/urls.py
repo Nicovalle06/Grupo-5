@@ -9,7 +9,8 @@ app_name= "noticias"
 urlpatterns = [
 	path('admin/', admin.site.urls),
 
-	path('noticias/',views.Noticia.as_view(), name='noticias')
+	path('listar/',views.ListarNoticias, name='listar'),
+    path('detalles/<int:pk>', views.NewDetail.as_view(), name = 'detalles')
 
 
 
