@@ -1,5 +1,6 @@
 {% extends 'layout.html'%}
 {%block content%}
+<<<<<<< HEAD
 
 
 <div class="jumbotron jumbotron-fluid">
@@ -62,3 +63,31 @@
           </div>
         </div>
  -->
+=======
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">FORO</h1>
+            <form method="GET">
+              <select name="buscar">
+                {% for t in tematica %}
+                  <option>{{t.nombre}}</option>
+                {% endfor %}
+              </select>
+              <button type="submit">Buscar</button>
+              {% for p in object_list%}
+                {% if p.tematica == "submit"%}
+                    <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">{{p.titulo}}</h5>
+                      <p class="card-text">{{p.texto}}</p>
+                      <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+                        </form>
+                {% endif %}
+              {% endfor %}
+
+        </div>
+      </div>
+    {% endfor %}
+
+  {%endblock%}
+>>>>>>> 40ae253ca52e7cfae27d1aa6e5af01ae9e347448
