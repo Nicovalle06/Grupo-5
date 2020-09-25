@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import AltaPost
+from .forms import AltaPost , Comentarios
 from .models import Post, Tematica
 from django.views.generic import CreateView, DetailView
 from django.views.generic.list import ListView
@@ -62,4 +62,16 @@ def buscar(request):
         todos = Post.objects.all().order_by('-fecha_publicacion')
         context['posteos'] = todos
 
+<<<<<<< HEAD
     return render(request, 'foro/buscar.html',context )
+=======
+    return render(request, 'foro/listar.html', context)
+
+
+def Comentario(request):
+    if request.method == 'POST':
+        form = Comentarios(request.POST)
+    else:
+        form = Comentarios()
+    return render_to_response('detalle.html', {'form': form})
+>>>>>>> 40ae253ca52e7cfae27d1aa6e5af01ae9e347448

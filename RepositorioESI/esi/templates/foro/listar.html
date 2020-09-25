@@ -11,7 +11,20 @@
 
     {{p.texto|truncatechars:50}}
 
+<<<<<<< HEAD
     <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver Más</a>
+=======
+    {% for p in posteos %}
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{p.titulo}}</h5>
+        <p class="card-text">{{p.texto|truncatechars:50}}</p>
+        <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+      </div>
+    </div>
+          <br>
+>>>>>>> 40ae253ca52e7cfae27d1aa6e5af01ae9e347448
     {% endfor %}
 
     <div class="pagination">

@@ -1,0 +1,28 @@
+{% extends 'layout.html'%}
+{%block content%}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">noti</h1>
+      
+
+           
+    {% for p in noticias %}
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{p.titulo}}</h5>
+        {{p.autor}}
+        {% if p.imagen %}
+          <img src="{{p.imagen.url}}" width="100" height="100">
+        {% else %}
+          <p>NO TENGO IMAGEN</p>
+        {% endif %}
+        <a href="{% url 'noticias:detalles' p.id %}" class="btn btn-primary">Ver</a>
+      </div>
+    </div>
+          <br>
+    {% endfor %}
+
+  {%endblock%}
+  </div>
+</div>

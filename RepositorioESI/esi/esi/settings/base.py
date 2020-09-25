@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.usuarios',
     'apps.foro',
     'apps.myv',
+    'apps.noticias',
 ]
 
 MIDDLEWARE = [

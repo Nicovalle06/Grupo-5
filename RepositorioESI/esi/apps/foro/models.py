@@ -16,6 +16,22 @@ class Post(models.Model):
     texto = models.TextField()
     fecha_publicacion = models.DateTimeField(default=timezone.now)
     tematica = models.ForeignKey(Tematica, related_name='miTematica', null=True, on_delete=models.SET_NULL)
+    comentario = models.TextField()
 
     def __str__(self):
         return self.titulo
+
+
+class Comentario(models.Model):
+    post = models.ForeignKey('foro.Post', on_delete=models.CASCADE, related_name='comentarios')
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.CASCADE)
+    mensaje = models.TextField()
+    fecha_creacion = models.DateTimeField(default=timezone.now)
+    comentario_aprobado = models.BooleanField(default=False)
+
+    def approve(self):
+        self.comentario_aprobado = True
+        self.save()
+
+    def __str__(self):
+        return self.mensaje
