@@ -6,34 +6,35 @@
     <h1 class="display-4">{{object.titulo}}</h1>
     {{object.fecha_publicacion| date }}
     <br>
-    {{object.texto}}
+    {{object.texto}}<br>
 
+
+
+    <hr>
+
+<p class="lead"><a class="boton" href="{% url 'foro:listar' %}" style=""> Volver </a></p>
+
+  <!-- WARNING:
+    <a>Comentarios: {{ post.comentarios.count }}</a>
+    {% for comentario in post.comentarios.all %}
+        <div class="comentario">
+            <div class="fecha">{{ comentario.fecha_creacion }}</div>
+            <strong>{{ comentario.usuario }}</strong>
+            <p>{{ comentario.mensaje|linebreaks }}</p>
+        </div>
+    {% empty %}
+        <p>Aún no existen comentarios. ¡Hace uno!</p>
+    {% endfor %}
+    <h1>Comentar: </h1>
+    <form method='POST'>
+      {%csrf_token%}
+    {{ form.as_p }}
+    <input type="submit" name="" value="Comentar">
+    </form>
+  -->
   </div>
-<<<<<<< HEAD
 </div>
 
 
-  <p class="lead"><a class="boton" href="{% url 'foro:listar' %}" style=""> Volver </a></p>
-
-=======
-  <hr>
-  <a>Comentarios: {{ post.comentarios.count }}</a>
-  {% for comentario in post.comentarios.all %}
-      <div class="comentario">
-          <div class="fecha">{{ comentario.fecha_creacion }}</div>
-          <strong>{{ comentario.usuario }}</strong>
-          <p>{{ comentario.mensaje|linebreaks }}</p>
-      </div>
-  {% empty %}
-      <p>Aún no existen comentarios. ¡Hace uno!</p>
-  {% endfor %}
-  <h1>Comentar: </h1>
-  <form method='POST'>
-    {%csrf_token%}
-    <p>{{ form.as_p }}</p>
-  <input type="submit" name="" value="Comentar">
-  </form>
- 
->>>>>>> 40ae253ca52e7cfae27d1aa6e5af01ae9e347448
 <! FIN
 {% endblock %}

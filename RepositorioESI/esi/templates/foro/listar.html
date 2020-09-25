@@ -4,18 +4,38 @@
   <div class="container">
     <h1 class="display-4">FORO</h1>
       <p class="lead"><a class="boton" href="{% url 'foro:crear' %}" style=""> Crear Posteo </a></p>
+
+<!-- WARNING:
       <p class="lead"><a class="boton" href="{% url 'foro:buscar' %}" style=""> Buscar por Tematica </a></p>
-    {% for p in page_obj %}
-        <br>
-    {{p.titulo}}
+ -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 search">
+          <form method="get">
+            <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                <input type="text" class="form-control" placeholder="Buscar.." name="buscar" value="{{ request.GET.buscar }}">
+                <span class="input-group-list">
+                  <i class="icon icon-search"></i>
+                  <button type="submit" class="boton btn-success">Buscar</button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+<hr>
 
+    {% for p in posts %}
+    <br>
+    <h5 class="card-title">{{p.titulo}}</h5>
     {{p.texto|truncatechars:50}}
-
-<<<<<<< HEAD
     <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver Más</a>
-=======
-    {% for p in posteos %}
+    {%endfor%}
 
+<!-- WARNING:
+    {% for p in posteos %}
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">{{p.titulo}}</h5>
@@ -23,31 +43,24 @@
         <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
       </div>
     </div>
-          <br>
->>>>>>> 40ae253ca52e7cfae27d1aa6e5af01ae9e347448
+    <br>
     {% endfor %}
-
+  -->
     <div class="pagination">
         <span class="step-links">
-            {% if page_obj.has_previous %}
+            {% if posts.has_previous %}
                 <a href="?page=1">&laquo; Primero</a>
-                <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+                <a href="?page={{ posts.previous_page_number }}">Anterior</a>
             {% endif %}
-
             <span class="current">
-              | Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }} |
+              | Pagina {{ posts.number }} de {{ posts.paginator.num_pages }} |
             </span>
-
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">Último &raquo;</a>
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}">Siguiente</a>
+                <a href="?page={{ posts.paginator.num_pages }}">Último &raquo;</a>
             {% endif %}
         </span>
     </div>
-  {%endblock%}
   </div>
 </div>
-
-<!--<p><b>AUTOR: </b>{{p.autor}} </p>  -->
-
-<!--<p><b>TITULO: </b><a href="{% url 'foro:detalle' p.id %}">{{p.titulo}}</a></p> -->
+{%endblock%}
