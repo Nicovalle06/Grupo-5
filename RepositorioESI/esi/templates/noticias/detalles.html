@@ -6,9 +6,20 @@
     <h1 class="display-4">{{object.titulo}}</h1>
     {{object.fecha_publicacion}}
     <br>
+    <p>{{object.copete}} </p>
+    <br>
+    {% if object.imagen %}
+        <a href="{{object.fuente}}">
+          <img src="{{object.imagen.url}}" width= 520 height= 320 alt="es la imagen de la noticia" title="autor: {{object.autor}} fuente: {{object.fuente}} ">
+        </a>>
+        {% else %}
+          <p>NO HAY IMAGEN PARA MOSTRAR</p>
+    {% endif %}
+    <br>
+    <p>fuente: <a href="{{object.fuente}}">{{object.fuente}}</a> </p>
+    <br>
     {{object.cuerpo}}
     <br>
-    <img src="{{object.imagen.url}}" width="500" height="500">
   </div>
 </div>
   
