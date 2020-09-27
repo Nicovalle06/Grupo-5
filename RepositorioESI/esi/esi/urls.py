@@ -9,7 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home,name="home"),
     #path('noticias/',views.Noticias,name="noticias"),
-    path('mitos/',views.Mitos,name="mitos"),
     path('legal/',views.Legal,name="legal"),
     path('Login',auth.LoginView.as_view(template_name  = "usuarios/login.html"), name="login"),
     path('Logout',auth.LogoutView.as_view(), name="logout"),
@@ -18,6 +17,7 @@ urlpatterns = [
     path('foro/',include('apps.foro.urls')),
     path('usuarios/',include('apps.usuarios.urls')),
     path('noticias/', include('apps.noticias.urls')),
+    path('mitos/', include('apps.myv.urls'))
 ]
 
 

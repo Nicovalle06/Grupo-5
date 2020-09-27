@@ -1,0 +1,44 @@
+{% extends "layout.html"%}
+{% block content %}
+<! JUMBOTON ->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/myv.css'%}">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Mitos y Verdades</h1>
+    <p class="lead">Aunque vivimos en la era de la información y muchas veces creemos 'saberlo todo', tradicionalmente los temas relacionados <br>
+                    a la sexualidad de las personas, fueron considerados tabú o del ámbito privado. Por suerte, las cosas han cambiado y <br>
+                    estamos acá para acompañar esos cambios. En esta sección te proponemos derribar los mitos que existen en torno a la ESI <br>
+                    <strong>¡APRENDAMOS JUNTXS!</strong> 
+    </p>
+    <section id = "principal">
+      <section class = "myv">
+        <article class="">
+        <h5 class="titulo-post">{{object.title}}</h5>
+        <p class = "descripcion">{{object.description}}</p>
+        </article>
+        <table class = "tabla">
+            <tr class = "encabezados-tabla">
+                <th style="width:120px;" class="encabezado-verdad">Verdad</th>
+                <th style="width:5px;" class="encabezado-vs">VS.</th>
+                <th style="width:120px;" class="encabezado-mito">Mito</th>
+            </tr>
+            <tr>
+                <td style="width:120px;">{{object.verdad}}</td>
+                <td style="width:5px;"></td>
+                <td style="width:120px;">{{object.mito}}</td>
+            </tr>
+        </table>
+        <article class = "conclusion">
+            <h5>Resumiendo...</h5>
+            <p>{{object.conclusion}}</p>
+
+        </article>
+      </section>
+            <a href="{% url 'myv:mitos' %}" class="btn btn-primary">Volver</a>
+  </section>
+  </div>
+</div>
+<! FIN
+{% endblock %}
+
