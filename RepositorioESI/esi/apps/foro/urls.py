@@ -10,7 +10,8 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('Crear/', views.Crear.as_view(), name="crear"),
 	#path('Listar/', views.Listar.as_view(), name="listar"),
-	path('Listar/', views.Listar, name="listar"),
+	path('Listar/', views.listing, name="listar"),
+	path('Buscar/', views.buscar, name="buscar" ),
 	path('Detalle/<int:pk>', views.PostDetail.as_view(), name = 'detalle')
 	
 

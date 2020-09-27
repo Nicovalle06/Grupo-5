@@ -2,13 +2,20 @@ from django.shortcuts import render, redirect
 from .forms import AltaPost , Comentarios
 from .models import Post, Tematica
 from django.views.generic import CreateView, DetailView
-from django.views.generic.list import ListView
+#from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponse,Http404
+from apps.foro.models import Post
+from django.db.models import Q
 
-#from django.utils import timezone
+import json
 
-#Vistas basadas en clases
+
+from django.core.paginator import Paginator
+
+
+#--------------Vista basada en clases-----------------
 class Crear(LoginRequiredMixin,CreateView):
     model = Post
     form_class = AltaPost
@@ -31,25 +38,38 @@ class PostDetail(DetailView):
     template_name = 'foro/detalle.html'
 
 
-def Listar(request):
+#------------------Funciones-------------------
+
+def listing(request):
+    queryset = request.GET.get("buscar")
+    posts = Post.objects.filter()
+    if queryset:
+        posts = Post.objects.filter(
+            Q(titulo__icontains = queryset) |
+            Q(texto__icontains = queryset)
+
+        ).distinct()
+
+    paginator = Paginator(posts,3) # Show 25 contacts per page.
+    page_number = request.GET.get('page')
+    posts = paginator.get_page(page_number)
+
+    return render(request, 'foro/listar.html', {'posts': posts})
+
+
+
+def buscar(request):
     context = {}
     tematicas = Tematica.objects.all()
     context['tematica'] = tematicas
     id_tem = request.GET.get('buscar', None)
 
     if id_tem:
-            resultado = Post.objects.filter(tematica = id_tem)
-            context['posteos'] = resultado
+        resultado = Post.objects.filter(tematica = id_tem).order_by('-fecha_publicacion')
+        context['posteos'] = resultado
+
     else:
-        todos = Post.objects.all()
+        todos = Post.objects.all().order_by('-fecha_publicacion')
         context['posteos'] = todos
 
-    return render(request, 'foro/listar.html', context)
-
-
-def Comentario(request):
-    if request.method == 'POST':
-        form = Comentarios(request.POST)
-    else:
-        form = Comentarios()
-    return render_to_response('detalle.html', {'form': form})
+    return render(request, 'foro/buscar.html',context )
