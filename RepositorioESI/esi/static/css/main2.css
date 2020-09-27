@@ -14,3 +14,7 @@ text-transform: uppercase; /*capitalización texto*/
 font-family: 'Helvetica', sans-serif; /*tipografía texto*/
 border-radius: 50px; /*bordes redondos*/
 }
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'apps.foro',
     'apps.myv',
     'apps.noticias',
+    'import_export',
 ]
 
 MIDDLEWARE = [
