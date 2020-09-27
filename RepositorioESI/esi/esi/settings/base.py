@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'apps.myv',
     'apps.noticias',
     'import_export',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -100,7 +101,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+#configuracion ckeditor
+CKEDITOR_CONFIGS ={
+    'default':{
+        'toolbar': 'full',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/

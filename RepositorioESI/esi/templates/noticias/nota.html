@@ -11,12 +11,12 @@
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">{{p.titulo}}</h5>
-        {{p.autor}}
         {% if p.imagen %}
-          <img src="{{p.imagen.url}}" width="170" height="110" alt="esto es la imagen de la noticia">
+          <img src="{{p.imagen}}" width="170" height="110" alt="esto es la imagen de la noticia">
         {% else %}
           <p>NO HAY IMAGEN PARA MOSTRAR</p>
         {% endif %}
+        <p>{{p.fecha_publicacion|date}}</p>
         <a href="{% url 'noticias:detalles' p.id %}" class="btn btn-primary">Ver</a>
       </div>
     </div>
