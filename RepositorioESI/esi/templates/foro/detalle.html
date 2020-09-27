@@ -8,33 +8,27 @@
     <br>
     {{object.texto}}<br>
 
-
-
     <hr>
 
-<p class="lead"><a class="boton" href="{% url 'foro:listar' %}" style=""> Volver </a></p>
+  <a class="btn btn-default" href="{% url 'foro:agregar' post.id %}">Agregar Comentario</a>
 
-  <!-- WARNING:
-    <a>Comentarios: {{ post.comentarios.count }}</a>
-    {% for comentario in post.comentarios.all %}
-        <div class="comentario">
-            <div class="fecha">{{ comentario.fecha_creacion }}</div>
-            <strong>{{ comentario.usuario }}</strong>
-            <p>{{ comentario.mensaje|linebreaks }}</p>
-        </div>
+    {% for comment in post.comentarios.all %}
+    <div class="comment">
+        <div class="date">{{ comment.fecha_creacion| date}}</div>
+        <strong>{{ comment.usuario }}</strong>
+        <p>{{ comment.mensaje|linebreaks }}</p>
+    </div>
     {% empty %}
-        <p>Aún no existen comentarios. ¡Hace uno!</p>
-    {% endfor %}
-    <h1>Comentar: </h1>
-    <form method='POST'>
-      {%csrf_token%}
-    {{ form.as_p }}
-    <input type="submit" name="" value="Comentar">
-    </form>
-  -->
-  </div>
-</div>
 
+    <p>No hay comentarios</p>
+
+    {% endfor %}
+
+
+
+    <p class="lead"><a class="boton" href="{% url 'foro:listar' %}" style=""> Volver </a></p>
+
+</div>
 
 <! FIN
 {% endblock %}

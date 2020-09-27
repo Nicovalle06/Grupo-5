@@ -1,18 +1,20 @@
-from django.shortcuts import render, redirect
-from .forms import AltaPost , Comentarios
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import AltaPost , CommentForm
 from .models import Post, Tematica
 from django.views.generic import CreateView, DetailView
 #from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse,Http404
-from apps.foro.models import Post
+from apps.foro.models import Post, Comentario
 from django.db.models import Q
+from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
 
 import json
 
 
-from django.core.paginator import Paginator
+
 
 
 #--------------Vista basada en clases-----------------
@@ -26,6 +28,7 @@ class Crear(LoginRequiredMixin,CreateView):
         p.autor = self.request.user
         p.save()
         return redirect(self.success_url)
+
 
 
 #class Listar(ListView):
@@ -73,3 +76,18 @@ def buscar(request):
         context['posteos'] = todos
 
     return render(request, 'foro/buscar.html',context )
+
+@login_required
+def agregar(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            Comentario = form.save(commit=False)
+            Comentario.usuario = request.user
+            Comentario.post = post
+            Comentario.save()
+            return redirect('foro:detalle', pk=pk)
+    else:
+        form = CommentForm()
+    return render(request, 'foro/agregarcomentario.html', {'form': form})

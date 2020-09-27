@@ -9,13 +9,9 @@ class AltaPost(forms.ModelForm):
         fields = '__all__'
         exclude = ['autor']
 
+class CommentForm(forms.ModelForm):
 
-class Comentarios(forms.Form):
-    
     class Meta:
         model = Comentario
-        fields = [
-            'usuario',
-            'mensaje',
-            'fecha_publicación',            
-        ]
+        fields = ('mensaje',)
+        exclude = ['usuario']

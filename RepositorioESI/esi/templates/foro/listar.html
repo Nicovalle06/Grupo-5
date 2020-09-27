@@ -27,25 +27,17 @@
     </div>
 <hr>
 
+  {% if posts %}
     {% for p in posts %}
-    <br>
-    <h5 class="card-title">{{p.titulo}}</h5>
-    {{p.texto|truncatechars:50}}
-    <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver Más</a>
+      <br>
+      <h5 class="card-title">{{p.titulo}}</h5>
+      {{p.texto|truncatechars:50}}
+      <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver Más</a>
     {%endfor%}
-
-<!-- WARNING:
-    {% for p in posteos %}
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">{{p.titulo}}</h5>
-        <p class="card-text">{{p.texto|truncatechars:50}}</p>
-        <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
-      </div>
-    </div>
-    <br>
-    {% endfor %}
-  -->
+  {% else %}
+      <h5 class="card-title">No se encontaron coincidencias!! </h5>
+  {% endif %}
+  <hr>
     <div class="pagination">
         <span class="step-links">
             {% if posts.has_previous %}

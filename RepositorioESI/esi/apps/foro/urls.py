@@ -12,7 +12,8 @@ urlpatterns = [
 	#path('Listar/', views.Listar.as_view(), name="listar"),
 	path('Listar/', views.listing, name="listar"),
 	path('Buscar/', views.buscar, name="buscar" ),
-	path('Detalle/<int:pk>', views.PostDetail.as_view(), name = 'detalle')
+	path('Detalle/<int:pk>', views.PostDetail.as_view(),name = 'detalle'),
+	path('Agregar/<int:pk>', views.agregar, name='agregar'),
 
 
 
