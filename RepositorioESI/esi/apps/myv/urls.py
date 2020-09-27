@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import DetailView
 from django.urls import path
 from . import views
 
@@ -8,8 +9,8 @@ app_name = "myv"
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	path('MyV/', views.MyV, name="mitosyverdades"),
-
+	path('mitos/', views.Listar_myv, name="mitos"),
+    path('detalles/<int:pk>', views.Detalles_myv.as_view(), name = 'detalles'),
 
 ]
 

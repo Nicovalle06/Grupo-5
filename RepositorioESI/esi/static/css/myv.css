@@ -1,0 +1,83 @@
+#principal{
+    width: 100%;
+    height: auto; overflow: hidden;
+    margin: 10px auto;
+}
+
+#publicaciones{
+    width: 100%;
+    height: auto; overflow: hidden;
+    margin-top: 10px;
+}
+
+#publicaciones a .titulo-post{
+    color: #6e6e6e;
+    margin: 10px auto;
+    text-align: center;
+   
+}
+
+
+#publicaciones .titulo-post:hover{
+    text-decoration: underline;
+} 
+
+
+.myv{
+    width: 96%;
+    height: auto; overflow: hidden;
+    padding: 7px;
+    background: #fdfdfd;
+    border-left-style: solid;
+    border-left-width: 2px ;
+    border-left-color: #ff00ff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15 px #ccc;
+    margin-bottom: 25px;
+}
+
+.enlace-post{
+    text-decoration: none;
+}
+
+.img-post{
+    float: left;
+    margin-top: 7px 7px 7px 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.descripcion{
+    padding: 5px;
+}
+
+.tabla{
+    width: 99%; 
+}
+
+.encabezado-mito{
+    margin: 10px auto;
+    text-align: center;
+    background-color: #edc8c5;
+}
+
+.encabezado-verdad{
+    margin: 10px auto;
+    text-align: center;
+    background-color: #9cd9b6;
+}
+
+.encabezado-vs{
+    margin: 10px auto;
+    text-align: center;
+    
+}
+
+.conclusion{
+    padding: 5px;
+    margin-top: 20px;
+    border-top-style: solid;
+    border-top-width: 2px ;
+    border-top-color: #bfbbbf;
+
+}
