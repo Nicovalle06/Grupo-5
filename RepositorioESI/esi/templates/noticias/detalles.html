@@ -2,17 +2,29 @@
 {% block content %}
 <! JUMBOTON ->
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">{{object.titulo}}</h1>
-    {{object.fecha_publicacion}}
-    <br>
-    {{object.cuerpo}}
-    <br>
-    <img src="{{object.imagen.url}}" width="500" height="500">
-  </div>
+	<div class="container">
+		<h1 class="display-3">{{object.titulo}}</h1>
+		<p class="post-meta">{{object.fecha_publicacion|date:"n/d/o"}}</p>
+		<p class="post-meta">{{object.fecha_publicacion|date}}</p>
+		<br>
+		<h2>{{object.copete}} </h2>
+		<br>
+		{% if object.imagen %}
+				<a href="{{object.fuente}}">
+					<img src="{{object.imagen.url}}" width= 520 height= 320 alt="es la imagen de la noticia" title="Autor:   {{object.autor}}   Fuente: {{object.fuente}} ">
+				</a>>
+				{% else %}
+					<p>NO HAY IMAGEN PARA MOSTRAR</p>
+		{% endif %}
+		<br>
+		<a href="{{object.fuente}}">haga click aqui para ir a la fuente </a> 
+		<br>
+		{{object.cuerpo}}
+		<br>
+	</div>
 </div>
-  
-  
+	
+	
  
 <! FIN
 {% endblock %}

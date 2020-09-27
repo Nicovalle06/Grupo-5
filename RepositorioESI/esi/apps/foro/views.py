@@ -76,6 +76,7 @@ def buscar(request):
         context['posteos'] = todos
 
     return render(request, 'foro/buscar.html',context )
+<<<<<<< HEAD
 
 @login_required
 def agregar(request, pk):
@@ -91,3 +92,5 @@ def agregar(request, pk):
     else:
         form = CommentForm()
     return render(request, 'foro/agregarcomentario.html', {'form': form})
+=======
+>>>>>>> 782c72b53d20670e855a1c9a350bf097dc3d711e

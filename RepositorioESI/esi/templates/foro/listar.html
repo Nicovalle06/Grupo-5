@@ -37,6 +37,21 @@
   {% else %}
       <h5 class="card-title">No se encontaron coincidencias!! </h5>
   {% endif %}
+<<<<<<< HEAD
+=======
+<!-- WARNING:
+    {% for p in posteos %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{p.titulo}}</h5>
+        <p class="card-text">{{p.texto|truncatechars:50}}</p>
+        <a href="{% url 'foro:detalle' p.id %}" class="btn btn-primary">Ver</a>
+      </div>
+    </div>
+    <br>
+    {% endfor %}
+  -->
+>>>>>>> 782c72b53d20670e855a1c9a350bf097dc3d711e
   <hr>
     <div class="pagination">
         <span class="step-links">

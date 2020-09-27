@@ -23,6 +23,7 @@
     <p>No hay comentarios</p>
 
     {% endfor %}
+<<<<<<< HEAD
 
 
 
@@ -30,5 +31,16 @@
 
 </div>
 
+=======
+    <h1>Comentar: </h1>
+    <form method='POST'>
+      {%csrf_token%}
+    {{ form.as_p }}
+    <input type="submit" name="" value="Comentar">
+    </form>
+  -->
+  </div>
+
+>>>>>>> 782c72b53d20670e855a1c9a350bf097dc3d711e
 <! FIN
 {% endblock %}
