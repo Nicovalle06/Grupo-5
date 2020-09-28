@@ -13,8 +13,12 @@ text-decoration: none; /*decoración texto*/
 text-transform: uppercase; /*capitalización texto*/
 font-family: 'Helvetica', sans-serif; /*tipografía texto*/
 border-radius: 50px; /*bordes redondos*/
+text-align: left;
 }
 
 .comment {
     margin: 20px 0px 20px 20px;
+		background-color: #2e518b; /*color botón*/
+		color: #ffffff; /*color texto*/
+		text-decoration: none; /*decoración texto*/
 }

@@ -15,8 +15,6 @@ import json
 
 
 
-
-
 #--------------Vista basada en clases-----------------
 class Crear(LoginRequiredMixin,CreateView):
     model = Post
@@ -45,7 +43,7 @@ class PostDetail(DetailView):
 
 def listing(request):
     queryset = request.GET.get("buscar")
-    posts = Post.objects.filter()
+    posts = Post.objects.all()
     if queryset:
         posts = Post.objects.filter(
             Q(titulo__icontains = queryset) |
@@ -53,7 +51,7 @@ def listing(request):
 
         ).distinct()
 
-    paginator = Paginator(posts,3) # Show 25 contacts per page.
+    paginator = Paginator(posts,5) # Show 25 contacts per page.
     page_number = request.GET.get('page')
     posts = paginator.get_page(page_number)
 
