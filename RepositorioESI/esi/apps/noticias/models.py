@@ -7,11 +7,11 @@ from ckeditor.fields import RichTextField
 from datetime import datetime
 from django.utils.functional import lazy
 from django.utils.timezone import localtime, now
-# Create your models here.
 
 
 
-class New(models.Model): 
+
+class New(models.Model):
 	titulo = models.CharField('titulo de la noticia',max_length=200)
 	autor = models.CharField('autor',max_length=200)
 	copete = models.TextField('copete')
@@ -22,9 +22,3 @@ class New(models.Model):
 
 	def __str__(self):
 		return self.titulo
-	"""@classmethod
-				def fecha(cls):
-					return self.fecha_publicacion.strftime("%m/%d/%Y)"""
-	"""@property
-			    def fechas(self):
-			        return self.fecha_publicacion.strftime('%d %m %Y')"""

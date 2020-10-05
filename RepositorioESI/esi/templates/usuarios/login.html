@@ -1,14 +1,27 @@
 {% extends 'layout.html' %}
-
 {% block content %}
-    <h1>Bienvenid@</h1>
 
-    <form method="POST">{%csrf_token%}
-      {{form.errors}}
+<div class="centrar-form">
 
-      <input type="text" name="username" placeholder="USUARIO">
-      <input type="password" name="password" placeholder="PASSWORD">
-      <input type="submit" name="" value="ENVIAR">
-    </form>
+        <div class="jumbotron jumbotron-fluid ">
+
+  <div class="container">
+    <h1 class="h1">BienvenidXs</h1>
+    <hr>
+      <div class="centrar-form">
+        <form method="POST">{%csrf_token%}
+          {{form.errors}}
+          <input id="form" type="text" name="username" placeholder="Escribí tu usuario"><br>
+          <br>
+          <input id="form" type="password" name="password" placeholder="Escribí tu contraseña"><br>
+          <br>
+          <input class="btn btn-primary" id="boton-blanco" type="submit" name="" value="ENVIAR">
+        </form>
+      </div>
+  </div>
+
+
 
 {% endblock %}
+</div>
+</div>

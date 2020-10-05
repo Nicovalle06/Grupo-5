@@ -1,12 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import AltaPost , CommentForm
-from .models import Post, Tematica
+from .models import Post, Tematica, Comentario
 from django.views.generic import CreateView, DetailView
-#from django.views.generic.list import ListView
+from django.views.generic.list import ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse,Http404
-from apps.foro.models import Post, Comentario
 from django.db.models import Q
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
@@ -43,15 +42,14 @@ class PostDetail(DetailView):
 
 def listing(request):
     queryset = request.GET.get("buscar")
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-fecha_publicacion')
     if queryset:
         posts = Post.objects.filter(
             Q(titulo__icontains = queryset) |
             Q(texto__icontains = queryset)
-
         ).distinct()
 
-    paginator = Paginator(posts,5) # Show 25 contacts per page.
+    paginator = Paginator(posts,3)
     page_number = request.GET.get('page')
     posts = paginator.get_page(page_number)
 

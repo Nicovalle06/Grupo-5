@@ -3,12 +3,15 @@
 {% block content %}
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1>Nuevo Comentario</h1>
+    <h1 class="h1">Nuevo Comentario</h1>
+   <div class="tarjeta">
     <form method="POST"  class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Enviar</button>
+        <button type="submit" class="boton">Comentar</button>
     </form>
 </div>
-
 </div>
+
+
 {% endblock %}
+</div>

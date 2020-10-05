@@ -6,39 +6,38 @@
 	<meta name="viewport" content="width=device-width, initial*scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Educación Sexual Integral</title>
-	<link rel="icon" href="{% static 'icono/esi.ico'%}">
+	<link rel="icon" href="{% static 'icono/LOGO.ico'%}">
 	<!bootstrap->
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!fin->
 	<!CSS->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="{% static 'css/main2.css'%}">
 	<!FIN->
 </head>
 <body>
 	<! NAVEGADOR BARRA ->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">ESI</a>
+	<nav class="navbar navbar-expand-lg" style="background-color:white">
+		<a class="botonEsi" href="{% url 'home' %}">#ESI</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
 	</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
-
-				<a class="nav-link active" href="{% url 'home' %}">Inicio <span class="sr-only">(current)</span></a>
-
-				<a class="nav-link" href="{% url 'noticias:Notas' %}">Noticias</a>
-				<a class="nav-link" href="{% url 'myv:mitos' %}">Mitos y verdades</a>
-
-				<a class="nav-link" href="{% url 'foro:listar' %}">Foro</a>
-				<a class="nav-link" href="{% url 'legal' %}">Leyes y Aspectos Legales</a>
+				<a class="boton" href="{% url 'noticias:Notas' %}">Noticias</a>
+				<a class="boton" href="{% url 'myv:mitos' %}">Mitos y Verdades</a>
+				<a class="boton" href="{% url 'foro:listar' %}">Foro</a>
+				<a class="boton" href="{% url 'legal' %}">Legales</a>
 		</div>
 		</div>
 				{% if user.is_authenticated%}
-						<h5>Hola {{user.username}}</h5>
-						<a class="nav-link active" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
+						<h5 class="boton">Hola {{user.username}}</h5>
+						<a class="boton" href="{% url 'logout' %}">Cerrar Sesión <span class="sr-only">(current)</span></a>
 				{% else %}
-			  		<a class="nav-link active" href="{% url 'login' %}">Login <span class="sr-only">(current)</span></a>
-						<a class="nav-link active" href="{% url 'usuarios:registrar' %}">Registrar <span class="sr-only">(current)</span></a>
+			  		<a class="boton" href="{% url 'login' %}">Iniciar Sesión <span class="sr-only">(current)</span></a>
+						<a class="boton" href="{% url 'usuarios:registrar' %}">Registrar <span class="sr-only">(current)</span></a>
 				{% endif %}
 </nav>
 	<!NAVBAR->
@@ -53,5 +52,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
-
+	<footer class="footer">
+            <br>
+            <a id="nav" href="https://www.instagram.com/esiparatodxs" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a id="nav" href="https://www.twitter.com/esiparatodxs" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a id="nav" href="https://www.facebook.com/esiparatodxs" target="_blank"><i class="fab fa-facebook"></i></a>
+            <h5>  Grupo 5 - INFORMATORIO Quarantine Edition 2020</h5>
+						  <h5> @ Derechos Reservados </h5>
+            <br>
+        </footer>
 </html>

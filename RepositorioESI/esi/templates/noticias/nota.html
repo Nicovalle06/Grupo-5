@@ -2,27 +2,18 @@
 {%block content%}
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">noticias</h1>
-      
+    <h1 class="h1">NOTICIAS</h1>
 
-           
     {% for p in noticias %}
-
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">{{p.titulo}}</h5>
-        {% if p.imagen %}
-          <img src="{{p.imagen}}" width="170" height="110" alt="esto es la imagen de la noticia">
-        {% else %}
-          <p>NO HAY IMAGEN PARA MOSTRAR</p>
-        {% endif %}
-        <p>{{p.fecha_publicacion|date}}</p>
-        <a href="{% url 'noticias:detalles' p.id %}" class="btn btn-primary">Ver</a>
+      <div class="tarjeta">
+          <h5 class="card-title">{{p.titulo}}</h5>
+          <img src="{{p.imagen}}" width="170" height="110" alt="No hay imagen para mostrar">
+          <p>{{p.fecha_publicacion|date}}</p>
+          <a href="{% url 'noticias:detalles' p.id %}" class="boton">Ver</a>
       </div>
-    </div>
-          <br>
+    <br>
     {% endfor %}
 
+</div>
   {%endblock%}
   </div>
-</div>

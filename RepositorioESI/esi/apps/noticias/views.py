@@ -20,6 +20,3 @@ def ListarNoticias(request):
 class NewDetail(DetailView):
     model = New
     template_name = 'noticias/detalles.html'
-"""class formarteo(request,obj):
-
-    return "<h1> {0}</h1>".format(obj.strftime("%d %m %Y"))"""

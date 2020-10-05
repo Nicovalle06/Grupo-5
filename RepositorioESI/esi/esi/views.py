@@ -1,8 +1,21 @@
 from django.shortcuts import render
+from apps.noticias import views
+from apps.noticias.models import New
+from apps.foro.models import Post as postmodel
+from apps.foro.views import *
+
+
 
 
 def Home(request):
-	return render(request,'home.html')
+	p = postmodel.objects.all().order_by('-fecha_publicacion')
+	n = New.objects.all().order_by('-fecha_publicacion')
+	context = {
+	'noticias': n,
+	'posts': p,
+	}
+	return render(request, 'home.html', context)
+
 #def Noticias(request):
 #	return render(request,'noticias.html')
 def Foro(request):

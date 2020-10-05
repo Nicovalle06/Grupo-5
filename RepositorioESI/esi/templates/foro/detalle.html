@@ -1,32 +1,35 @@
 {% extends 'layout.html'%}
 {% block content %}
 <! JUMBOTON ->
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron">
   <div class="container">
-    <h1 class="display-4">{{object.titulo}}</h1>
-    {{object.fecha_publicacion| date }}
+    <h3 class="h1"><strong>{{object.titulo}}</strong></h3>
     <br>
-    {{object.texto}}<br>
+    <p id="format2">{{object.fecha_publicacion| date }}</p>
+    <br>
+    <p id="format2">{{object.texto}}</p>
+    <br>
 
     <hr>
 
-  <a class="btn btn-default" href="{% url 'foro:agregar' post.id %}">Agregar Comentario</a>
+  <a class="btn btn-primary" id="boton-blanco-com" href="{% url 'foro:agregar' post.id %}">Agregar Comentario</a>
 
-  <h3>Comentarios</h3>
-
+  <h3 id="format2">Comentarios</h3>
+  <hr>
     {% for comment in post.comentarios.all %}
     <div class="comment">
-        <div class="date">{{ comment.fecha_creacion| date}}</div>
-        <strong>{{ comment.usuario }}</strong>
-        <p>{{ comment.mensaje|linebreaks }}</p>
+        <div id="format2">{{ comment.fecha_creacion| date}}</div>
+        <p id="format2"><strong>{{ comment.usuario }}</strong></p>
+        <p id="format2">{{ comment.mensaje}}</p>
+        <hr>
     </div>
     {% empty %}
 
-    <p>No hay comentarios</p>
+    <p id="format2">No hay comentarios</p>
 
     {% endfor %}
 
-    <p class="lead"><a class="boton" href="{% url 'foro:listar' %}" style=""> Volver </a></p>
-
-
+    <p class="lead"><a class="btn btn-primary" id="boton-blanco" href="{% url 'foro:listar' %}" style=""> Volver </a></p>
+</div>
 {% endblock %}
+</div>
